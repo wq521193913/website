@@ -5,6 +5,6 @@ var routes = {
     prefix:'view/',
     pageList:[
         {'serf':'app','url':'/app','templateUrl':'app.html','controller':''},
-        {'serf':'app.product','url':'/product','templateUrl':'product.html','controller':'','lzLoadJs':''}//frontProduct //view/front.product.js
+        {'serf':'app.product','url':'/product','templateUrl':'product.html','controller':'','lzLoadJs':'view/front.product.js'}//frontProduct //
     ]
 }

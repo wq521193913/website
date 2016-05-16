@@ -54,16 +54,12 @@ function getProduct(){
 
     var dataEl = [];
     var mEl = "";
-    var index = 0;
-    //while (index<10000){
-    //    index++;
-    //    console.log(index);
-    //}
+    dataEl.push("<table>");
     dataEl.push("<tr>");
     for(var i = 0; i < productList.length; i++){
         mEl = "<td>" +
             "<div class='product-img'>" +
-            "<img ng-src='"+productList[i].url+"'>"+
+            "<img src='"+productList[i].url+"'>"+
             "</div>"+
             "<div class='product-info'>"+
             "   <div class='product-name'>"+
@@ -81,67 +77,7 @@ function getProduct(){
             dataEl.push("<tr>");
         }
     }
+    dataEl.push("</table>");
     $("#productTable").append(dataEl);
     layer.closeAll('loading');
 }
-
-//app.directive("onFinishRender",function(){
-//    return {
-//        restrict:'A',
-//        link:function(scope,element,attr){
-//            layer.load(1);
-//            scope.lineList = [];
-//            scope.productList = [
-//                {"id":"1","url":"resource/11.jpg","name":"港荣蒸蛋糕1"},
-//                {"id":"2","url":"resource/11.jpg","name":"港荣蒸蛋糕2"},
-//                {"id":"3","url":"resource/11.jpg","name":"港荣蒸蛋糕3"},
-//                {"id":"4","url":"resource/11.jpg","name":"港荣蒸蛋糕4"},
-//                {"id":"5","url":"resource/11.jpg","name":"港荣蒸蛋糕5"},
-//                {"id":"6","url":"resource/11.jpg","name":"港荣蒸蛋糕6"},
-//                {"id":"7","url":"resource/11.jpg","name":"港荣蒸蛋糕7"},
-//                {"id":"8","url":"resource/11.jpg","name":"港荣蒸蛋糕8"},
-//            ];
-//            scope.lineList = new Array(parseInt(scope.productList.length/3)  + 1)
-//            scope.dataList = new Array();
-//            var index = 0;
-//            while (index<10000){
-//                index++;
-//                console.log(index);
-//            }
-//            var dataEl = [];
-//            var mEl = "";
-//            dataEl.push("<table id='productTable'>");
-//            dataEl.push("<tr>");
-//            for(var i = 0; i < scope.productList.length; i++){
-//                mEl = "<td>" +
-//                        "<div class='product-img'>" +
-//                            "<img ng-src='"+scope.productList[i].url+"'>"+
-//                        "</div>"+
-//                        "<div class='product-info'>"+
-//                        "   <div class='product-name'>"+
-//                        "   <a href='javascript:void(0)'>"+scope.productList[i].name+"</a>"+
-//                        "</div>"+
-//                        "<div class='product-intro'>"+
-//                        "    <a href='javascript:void(0)'>描述描述描述描述描述描述描述描述描述描述.....</a>"+
-//                        "    </div>"+
-//                        "    <input type='button' class='input-btn' value='加入购物车' ng-click=''>"+
-//                        "    </div>"+
-//                        "</td>";
-//                dataEl.push(mEl);
-//                if((i+1)/4 == 1 || (i+1) == scope.productList.length){
-//                    mEl.push("</tr>");
-//                    mEl.push("<tr>");
-//                }
-//            }
-//            dataEl.push("</table>");
-//            element.html(mEl.join(''))
-//
-//            if(scope.$last == true){
-//                element.ready(function(){
-//                    layer.closeAll("loading");
-//
-//                })
-//            }
-//        }
-//    }
-//})

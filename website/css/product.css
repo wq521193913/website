@@ -1,7 +1,10 @@
-#productTable tr td{
+#productTable table tr td{
     margin: 0px 10px 0px 10px;
     width: 35%;
 }
 .product-intro{
     width: 90%;
+}
+.front-product{
+    
 }
